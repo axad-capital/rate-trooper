@@ -20,6 +20,12 @@ const NavComp = () => {
                             <li className="nav-item">
                                 <Link to='/' className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>Home</Link>
                             </li>
+                            <li className="nav-item">
+                                <a href='#how-it-works-container' className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>How It Works</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href='#about-us' className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>About Us</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
