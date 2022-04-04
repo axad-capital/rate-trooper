@@ -4,7 +4,8 @@ import BlueCar from './blue-car.png'
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import DifferenceIcon from '@mui/icons-material/Difference';
 import ChatIcon from '@mui/icons-material/Chat';
-import WhoCar from './how-it-work.png'
+import WhoCar from './how-it-work.png';
+import Footer from '../Footer/Footer'
 
 const HomeComp = () => {
 
@@ -116,7 +117,8 @@ const HomeComp = () => {
                 <h1>Rate Trooper</h1>
                 <p>When you submit your details you will be shown links from insurance providers. We do not offer advice or offer or sell any insurance products shown on this site. We are not liable for any dealings you may have or advice you may or may not receive from these third parties, for their products or for information on their websites.</p>
             </div>
-
+            
+            <Footer />
         </div>
     )
 }
