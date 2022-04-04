@@ -1,0 +1,8 @@
+.navbar-light .navbar-nav .nav-link.active {
+    color: rgb(15, 0, 226) !important;
+    font-weight: 700;
+}
+
+.trooper-logo {
+    width: 85px;
+}
