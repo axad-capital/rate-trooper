@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './homeComp.css';
 import BlueCar from './blue-car.png'
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
@@ -9,9 +9,18 @@ import Footer from '../Footer/Footer'
 
 const HomeComp = () => {
 
+    const  [blankHandler, setBlankHandler] = useState('')
+
     function handleFormSubmit() {
-        let zip = document.getElementById('trooper-id').value
+        let zip = document.getElementById('trooper-zip').value
         console.log(zip);
+        if (document.getElementById('trooper-zip').value === null || document.getElementById('trooper-zip').value === '' || document.getElementById('trooper-zip').value.length < 5) {
+            setBlankHandler('You Must Enter A Valid Zipcode!')
+            return
+        }
+        let autoZip = document.getElementById('trooper-zip').value
+        localStorage.setItem('zipcodeTrooper', autoZip)
+        window.location.href = '/thanks'
     }
 
     return (
@@ -24,6 +33,7 @@ const HomeComp = () => {
                         <label htmlFor="trooper-zip">Enter Your Zipcode</label>
                         <input id='trooper-zip' name='trooper-zip' type="text" placeholder='Zipcode' />
                         <button className='form-btn' onClick={handleFormSubmit}>Submit</button>
+                        <p style={{color: 'red', textAlign: 'center'}} >{blankHandler}</p>
                     </div>
                 </div>
                 <div className='header-img'>
@@ -73,6 +83,7 @@ const HomeComp = () => {
                             <label htmlFor="trooper-zip">Enter Your Zipcode</label>
                             <input id='trooper-zip' name='trooper-zip' type="text" placeholder='Zipcode' />
                             <button className='form-btn' onClick={handleFormSubmit}>Submit</button>
+                            <p style={{color: 'red', textAlign: 'center'}} >{blankHandler}</p>
                         </div>
                     </div>
                     <div className='who-car-container'>

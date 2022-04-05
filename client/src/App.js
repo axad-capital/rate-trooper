@@ -6,6 +6,7 @@ import PrivacyPolicy from './pages/Legal/PrivacyPolicy';
 import Terms from './pages/Legal/Terms';
 import Disclaimer from './pages/Legal/Disclaimer';
 import Partners from './pages/Legal/Partners';
+import Thanks from './pages/Thanks/Thanks';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path='/terms' element={<Terms />} />
           <Route exact path='/disclaimer' element={<Disclaimer />} />
           <Route exact path='/partners' element={<Partners />} />
+          <Route exact path='/thanks' element={<Thanks />} />
         </Routes>
       </Router>
     </div>
