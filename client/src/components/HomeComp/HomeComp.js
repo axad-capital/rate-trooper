@@ -12,17 +12,8 @@ const HomeComp = () => {
     const [blankHandler, setBlankHandler] = useState('')
 
     function handleFormSubmit() {
-        // let zip = document.getElementById('trooper-zip').value
-        // console.log(zip);
-        // if (document.getElementById('trooper-zip').value === null || document.getElementById('trooper-zip').value === '' || document.getElementById('trooper-zip').value.length < 5) {
-        //     setBlankHandler('You Must Enter A Valid Zipcode!')
-        //     return
-        // }
-        // let autoZip = document.getElementById('trooper-zip').value
-        // localStorage.setItem('zipcodeTrooper', autoZip)
-        // window.location.href = '/thanks'
 
-        if (document.getElementById('state').value === '' || document.getElementById('home-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
+        if (document.getElementById('trooper-zip').value === '' || document.getElementById('state').value === '' || document.getElementById('home-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
             setBlankHandler('All fields required')
             return
         }
@@ -40,6 +31,8 @@ const HomeComp = () => {
             "homeowner": document.getElementById('home-owner').value,
             "currentlyinsured": document.getElementById('insured').value
         }
+
+        localStorage.setItem('zipcodeTrooper', document.getElementById('trooper-zip').value)
 
         fetch('https://api.transparent.ly/search/blue/green', {
             method: 'POST',
@@ -63,7 +56,7 @@ const HomeComp = () => {
                     <p>Start requesting your personalized car insurance quotes in just minutes. We will match you with insurers that best fit your needs and budget.</p>
 
                     <div className='trooper-input-container'>
-                        <label htmlFor="trooper-zip">Enter Your Zipcode</label>
+                        <label htmlFor="trooper-zip"><strong>Enter Your Zipcode</strong></label>
                         <input id='trooper-zip' name='trooper-zip' type="text" placeholder='Zipcode' />
 
                         <label htmlFor="state"><strong>Please choose the current state you're in</strong></label>
