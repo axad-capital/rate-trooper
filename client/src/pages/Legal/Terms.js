@@ -1,11 +1,9 @@
 import React from 'react'
-import NavHome from '../../components/NavComp/NavComp';
 import './legal.css';
 
 const Terms = () => {
   return (
     <div>
-      <NavHome />
       <div className='legal'>
         <h1>TERMS AND CONDITIONS</h1>
         <p>Last updated March 09, 2022</p>

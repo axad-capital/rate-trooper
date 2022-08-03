@@ -1,12 +1,10 @@
 import React from 'react';
-import NavHome from '../../components/NavComp/NavComp';
 import './legal.css';
 
 const PrivacyPolicy = () => {
 
   return (
     <div>
-      <NavHome />
       <div className='legal'>
         <div>
           <h1>PRIVACY NOTICE</h1>
